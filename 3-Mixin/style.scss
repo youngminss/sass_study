@@ -1,0 +1,19 @@
+// 구문
+// @mixin 이름([$변수명: 값...])
+@mixin flexBox($fontSize: 30px) {
+  display: flex;
+  justify-content: center;
+  font-size: $fontSize;
+}
+
+.one {
+  @include flexBox(50px);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.two {
+  @include flexBox; // argument 안 넘김 => Mixin 정의 부분 default 값으로 적용
+  background-color: aqua;
+  color: black;
+}
