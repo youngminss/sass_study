@@ -52,7 +52,7 @@ nav ul li {
 	아무리 Nesting 되어 있다 해도, 이 키워드를 적용시키면, root Depth 위치에서 적용된다.
 */
 .one {
-  color: red;
+  color: darkred;
 }
 
 .one .two {

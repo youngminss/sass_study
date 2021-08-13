@@ -1,0 +1,26 @@
+$bgColor: red;
+$font-h1: 100px;
+$vaild-sides: left, center, right;
+$font-sizes: (
+  "myh1": 45px,
+  "myh2": 19px,
+  "p": 16px,
+);
+
+// Variable 기본 사용
+h1 {
+  // Variable 지역변수 사용
+  $spanColor: blue;
+  color: $bgColor;
+  // Sass - map 사용 & 연산 Operator 적용
+  font-size: map-get($font-sizes, $key: "p") * 5;
+  span {
+    color: $spanColor; // 자기 자신을 감싸고 있는 {} 내부에서는 적용 O
+  }
+}
+
+// Sass 에서 배열의 인덱싱은 "1" 부터(0 아님) 🔍
+p {
+  // color: $spanColor;	// h1 선택자 내부에서, 지역변수인 $spanColor 적용 X
+  text-align: nth($vaild-sides, -1);
+}

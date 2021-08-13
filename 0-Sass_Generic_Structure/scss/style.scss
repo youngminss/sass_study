@@ -1,0 +1,6 @@
+// style.scss => main.scss 라고 보면 된다.
+// 불필요한 코드는 없고, import 만 하는 것을 약속으로 한다.
+@import "variable";
+@import "mixin";
+@import "header";
+@import "home";
